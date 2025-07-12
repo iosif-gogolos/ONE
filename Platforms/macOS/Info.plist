@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.one</string>
+    
+    <key>CFBundleName</key>
+    <string>ONE</string>
+    
+    <key>CFBundleDisplayName</key>
+    <string>ONE Notes</string>
+    
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+    
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    
+    <key>CFBundleExecutable</key>
+    <string>ONE</string>
+    
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    
+    <key>LSMinimumSystemVersion</key>
+    <string>10.15</string>
+    
+    <!-- Document types for .one files -->
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeExtensions</key>
+            <array>
+                <string>one</string>
+            </array>
+            <key>CFBundleTypeName</key>
+            <string>ONE Note Document</string>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>LSHandlerRank</key>
+            <string>Owner</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>com.yourcompany.one.document</string>
+            </array>
+        </dict>
+    </array>
+    
+    <!-- UTI declaration for .one files -->
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+                <string>public.content</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>ONE Note Document</string>
+            <key>UTTypeIdentifier</key>
+            <string>com.yourcompany.one.document</string>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.filename-extension</key>
+                <array>
+                    <string>one</string>
+                </array>
+                <key>public.mime-type</key>
+                <string>application/json</string>
+            </dict>
+        </dict>
+    </array>
+    
+    <!-- Privacy usage descriptions -->
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>ONE needs access to your Documents folder to save and organize your notes.</string>
+    
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>ONE needs access to your Downloads folder to import notes and attachments.</string>
+</dict>
+</plist>

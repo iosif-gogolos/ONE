@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ONE.ViewModels"
+        xmlns:models="clr-namespace:ONE.Models"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="ONE.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ONE"
+        WindowStartupLocation="CenterScreen">
+    
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <Grid ColumnDefinitions="300,*">
+        <!-- Sidebar -->
+        <Border Grid.Column="0" Background="#F5F5F5" BorderBrush="#E0E0E0" BorderThickness="0,0,1,0">
+            <DockPanel>
+                <!-- Header -->
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="16,16,16,8">
+                    <TextBlock Text="ONE" FontSize="24" FontWeight="Bold" Foreground="#333"/>
+                    <Button Content="+" Command="{Binding AddPageCommand}" 
+                        Margin="8,0,0,0" Width="30" Height="30"
+                        Background="#007ACC" Foreground="White" 
+                        FontWeight="Bold" />
+                </StackPanel>
+                
+                <!-- Pages List -->
+                <ListBox ItemsSource="{Binding Pages}" 
+                         SelectedItem="{Binding SelectedPage}"
+                         Background="Transparent"
+                         Margin="8,0,8,8">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="models:NotePage">
+                            <TextBlock Text="{Binding Title}" 
+                                       Margin="8,4" 
+                                       FontSize="14"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Border>
+        
+        <!-- Main Content -->
+        <Grid Grid.Column="1">
+            <!-- Editor Area -->
+            <ScrollViewer IsVisible="{Binding SelectedPage, Converter={x:Static ObjectConverters.IsNotNull}}">
+                <StackPanel Margin="32,24">
+                    <!-- Title -->
+                    <TextBox Text="{Binding SelectedPage.Title}" 
+                             FontSize="32" 
+                             FontWeight="Bold"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Watermark="Untitled"
+                             Margin="0,0,0,24"/>
+                    
+                    <!-- Content -->
+                    <TextBox Text="{Binding SelectedPageContent}"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             FontSize="16"
+                             MinHeight="400"
+                             Watermark="Start writing..."
+                             Name="ContentEditor"/>
+                </StackPanel>
+            </ScrollViewer>
+            
+            <!-- Welcome Message -->
+            <TextBlock Text="Select a page to start editing" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="18"
+                       Foreground="#999"
+                       IsVisible="{Binding SelectedPage, Converter={x:Static ObjectConverters.IsNull}}"/>
+        </Grid>
+    </Grid>
+</Window>
