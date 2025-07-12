@@ -29,3 +29,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/iosifgogolos/Documents/csharp_learning/ONE/Views/NoteEditorView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/iosifgogolos/Documents/csharp_learning/ONE/Views/SidebarView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

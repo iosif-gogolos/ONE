@@ -73,6 +73,7 @@
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.AssemblyInfoInputs.cache
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.AssemblyInfo.cs
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.csproj.CoreCompileInputs.cache
+/Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.sourcelink.json
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.csproj.Up2Date
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/ONE.dll
 /Users/iosifgogolos/Documents/csharp_learning/ONE/obj/Debug/net9.0/refint/ONE.dll
