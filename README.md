@@ -32,10 +32,11 @@ A simple, elegant cross-platform note-taking application built with Avalonia UI 
 ```bash
 git clone https://github.com/YOUR_USERNAME/ONE.git
 cd ONE
-
+```
 
 Build & Run
 macOS / Linux
+
 ```bash
 
 dotnet build
