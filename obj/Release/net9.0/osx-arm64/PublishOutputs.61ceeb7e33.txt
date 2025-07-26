@@ -1,0 +1,5 @@
+/Users/iosifgogolos/Documents/csharp_learning/ONE/bin/Release/net9.0/osx-arm64/publish/ONE.pdb
+/Users/iosifgogolos/Documents/csharp_learning/ONE/bin/Release/net9.0/osx-arm64/publish/libAvaloniaNative.dylib
+/Users/iosifgogolos/Documents/csharp_learning/ONE/bin/Release/net9.0/osx-arm64/publish/libHarfBuzzSharp.dylib
+/Users/iosifgogolos/Documents/csharp_learning/ONE/bin/Release/net9.0/osx-arm64/publish/libSkiaSharp.dylib
+/Users/iosifgogolos/Documents/csharp_learning/ONE/bin/Release/net9.0/osx-arm64/publish/ONE
